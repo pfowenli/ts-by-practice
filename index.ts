@@ -15,9 +15,13 @@ axios.get(url).then(response => {
     const name = user.name;
     const email = user.email;
 
+    logUser(id, name, email);
+});
+
+const logUser = (id: number, name: string, email: string) => {
     console.log(`
         The User with ID: ${id}
         Is called by name: ${name}
         Has email: ${email}
     `);
-});
+};
