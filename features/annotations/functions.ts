@@ -35,3 +35,18 @@ const keepLooping = (): never => {
         console.log('keep looping and do not end');
     }
 };
+
+
+const movie = {
+    id: 'tt1745960',
+    title: 'Top Gun: Maverick',
+    year: 2022,
+    genres: ['action', 'drama', 'adventure'],
+};
+
+// Deconstruct object parameter
+const logMovie = ({ title, year }: {title: string; year: number}): void => {
+    console.log(`${title} was released in ${year}`);
+};
+
+logMovie(movie);
